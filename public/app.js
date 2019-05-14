@@ -20,3 +20,16 @@ function something_1()
 		
 		alert(x);
 	}
+
+
+
+function something_2()
+	{
+		var x = window.localStorage.getItem('aaa');
+
+		x = x*1 +1;  //x to int use *
+
+		window.localStorage.setItem('aaa',  x);
+		
+		alert(x);
+	}

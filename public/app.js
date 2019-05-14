@@ -25,11 +25,14 @@ function something_1()
 
 function something_2()
 	{
-		var x = window.localStorage.getItem('aaa');
+		var x = window.localStorage.getItem('bbb');
 
 		x = x*1 +1;  //x to int use *
 
-		window.localStorage.setItem('aaa',  x);
+		window.localStorage.setItem('bbb',  x);
 		
 		alert(x);
 	}
+
+
+

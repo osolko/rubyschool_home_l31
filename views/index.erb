@@ -2,15 +2,25 @@
 
 <h3> Products: </h3>
 
-<% @product.each do |p| %>
-	 <a href="/product/<%= p.id %>"> 
-	 	<img src="<%= p.path_to_image %>" alt="<%= p.description %>" width="300" height="150"> <%= p.title %> </a>
-  <br>
-<%end%>
 
 
-
-
+<div class="container">
+  <div class="row">
+  	<% @product.each do |p| %>
+     <div class="col-sm-4"> 
+     	<div class='thumbnail'>
+	     	<a href="/product/<%= p.id %>"> <img src="<%= p.path_to_image %>"> </a>
+	     	<br/>
+	     	<div class="row">
+	     		<div class="col-sm-4"><b> <%= p.title %> </b></div>
+	     		<div class="col-sm-4">Size: <%= p.size %> </div>
+	     		<div class="col-sm-4">Cost: <%= p.price %> $</div>
+	     	</div>	
+     	</div>
+     </div>
+	<%end%>
+  </div>
+</div>
 
 
 <br/>

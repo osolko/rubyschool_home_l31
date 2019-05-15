@@ -18,7 +18,8 @@ end
 get '/' do
 
 # make  with order
-	  @product = Product.order 'created_at DESC'
+#	  @product = Product.order 'created_at DESC'
+	@product = Product.all
 
 	erb :index
 end

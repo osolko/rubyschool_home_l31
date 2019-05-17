@@ -35,4 +35,7 @@ function something_2()
 	}
 
 
-
+function add_to_cart()
+	{
+		alert('Hello from func!');
+	}

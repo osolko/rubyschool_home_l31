@@ -11,9 +11,9 @@ class  Product < ActiveRecord::Base
 
 end
 
-before do
-	@product = Product.all
-end
+# before do
+# 	@product = Product.all
+# end
 
 get '/' do
 

@@ -12,15 +12,20 @@
 	     	<a href="/product/<%= p.id %>"> <img src="<%= p.path_to_image %>"> </a>
 	     	<br/>
 	     	<div class="row">
-	     		<div class="col-md-4"><b> <%= p.title %> </b></div>
-	     		<div class="col-md-4">Size: <%= p.size %> </div>
+	     		<div class="col-md-4"> <b> <%= p.title %> </b></div>
+	     		<div class="col-md-4">Size: <%= p.size %> cm.</div>
 	     		<div class="col-md-4">Cost: <%= p.price %> $</div>
 	     	</div>	
+	     	<div class="row">
+	     		<div class="col-md-4"> <button type="button" class="btn btn-success btn-sm" onclick="alert('hello!')">Add to Cart</button> </div>
+	     	</div>		
      	</div>
      </div>
 	<%end%>
   </div>
 </div>
+
+
 
 
 <br/>

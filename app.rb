@@ -19,7 +19,7 @@ get '/' do
 
 # make  with order
 #	  @product = Product.order 'created_at DESC'
-	@product = Product.all
+	@products = Product.all
 
 	erb :index
 end

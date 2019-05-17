@@ -35,7 +35,7 @@ function something_2()
 	}
 
 
-function add_to_cart()
+function add_to_cart(id)
 	{
-		alert('Hello from func!');
+		alert('pizza add with id: '  + id);
 	}

@@ -43,8 +43,14 @@ function add_to_cart(id)
 		x = x * 1 +1;
 		window.localStorage.setItem(key,  x);
 
-		alert('Item in cart: ' + cart_get_number_of_items())
+		update_orders();
+	}
 
+
+function update_orders()
+	{
+		var orders = cart_get_orders();
+		$('#orders_input').val(orders);
 	}
 
 

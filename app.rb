@@ -30,6 +30,11 @@ get '/about' do
 end
 
 
+post '/cart' do
+  erb "Hello World"
+end
+
+
 
 get '/product/:id' do
  @product = Product.find(params[:id])

@@ -29,7 +29,8 @@ function update_orders_button()
 function cart_get_number_of_items()
 	{
 		var cnt = 0;
-		for(var i=0; i < window.localStorage.length; i++)	
+		
+		for(var i = 0; i < window.localStorage.length; i++)	
 			{
 				var key = window.localStorage.key(i); 			//get key from hash
 				var value = window.localStorage.getItem(key); 	//get value from hash
@@ -39,6 +40,7 @@ function cart_get_number_of_items()
 						cnt = cnt + value * 1;
 					}
 			}
+			
 			return cnt;
 	}
 

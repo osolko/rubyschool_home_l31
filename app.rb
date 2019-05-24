@@ -8,20 +8,18 @@ require 'sinatra/activerecord'
 set :database, "sqlite3:pizzashop.db"
 
 class  Product < ActiveRecord::Base
-
 end
 
 before do
-	@product = Product.all
+#	@product = Product.all
 	#@item = 0
 end
 
 get '/' do
 
 # make  with order
-#	  @product = Product.order 'created_at DESC'
+#	  @products = Product.order 'created_at DESC'
 	@products = Product.all
-
 	erb :index
 end
 

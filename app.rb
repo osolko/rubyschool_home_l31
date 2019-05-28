@@ -45,11 +45,12 @@ end
 
 
 post '/place_order' do
-  @o = Order.new params[:order]
-  if @o.save 
-    erb "<h2>Thank you,order has been placed!</h2>"
+  @place_order = Order.new params[:order]
+  if 
+    @place_order.save 
+    erb :order_placed
   else
-    @error = @o.errors.full_messages.first
+    @error = @place_order.errors.full_messages.first
     erb :cart
   end
 end

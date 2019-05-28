@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_28_043705) do
+ActiveRecord::Schema.define(version: 2019_05_28_053536) do
 
   create_table "orders", force: :cascade do |t|
     t.text "orders_input"

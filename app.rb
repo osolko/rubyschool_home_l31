@@ -20,9 +20,7 @@ before do
 end
 
 get '/' do
-
-# make  with order
-#	  @products = Product.order 'created_at DESC'
+# make  with order  @products = Product.order 'created_at DESC'
 	@products = Product.all
 	erb :index
 end
@@ -77,8 +75,6 @@ def parse_orders_input orders_input
 
   return arr
 end
-
-
 
 
 get '/product/:id' do

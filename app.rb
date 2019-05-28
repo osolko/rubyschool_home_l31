@@ -33,8 +33,6 @@ get '/about' do
 end
 
 
-
-
 post '/cart' do
   @orders_input = params[:orders]
   @items = parse_orders_input @orders_input
@@ -49,8 +47,13 @@ end
 
 
 post '/place_order' do
-
-
+  @o = Order.new params[:order]
+  if @o.save 
+    erb "<h2>Thank you,order has been placed!</h2>"
+  else
+    @error = @o.errors.full_messages.first
+    erb :cart
+  end
 end
 
 

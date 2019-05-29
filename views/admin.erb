@@ -1,0 +1,34 @@
+<h2> Admin panel</h2>
+
+<h3> Orders: </h3>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Order</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Addr</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+	
+	<% sequence = 0 %> 
+	<% @orders.each do |o| %>
+	    <tr>
+	      <th scope="row"> <%= sequence += 1 %></th>
+	      <td><%= o.orders_input %></td>
+	      <td><%= o.name %></td>
+	      <td><%= o.phone %></td>
+	      <td><%= o.address %></td>
+	      <td><%= o.created_at %></td>
+	    </tr>
+	<%end%>
+
+  </tbody>
+</table>
+
+

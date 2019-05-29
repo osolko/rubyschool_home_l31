@@ -69,7 +69,7 @@ function cancel_order()
     update_orders();
 	update_orders_button();
 
-	$('#cart').text('Cart has been clean')
+	$('#cart').text('Cart is empty')
 
 	return false;
 

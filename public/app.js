@@ -63,9 +63,13 @@ function cart_get_orders()
 
 function cancel_order()
 {
-    alert('Cart is empty');
- 
-    return false;
+    window.localStorage.clear();
+
+    update_orders();
+	update_orders_button();
+
+	return false;
+
 }
 
 

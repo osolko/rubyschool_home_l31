@@ -85,6 +85,11 @@ def parse_orders_input orders_input
   return arr
 end
 
+get '/admin' do
+  @orders = Order.order 'created_at DESC'
+
+  erb :admin
+end
 
 get '/product/:id' do
  @product = Product.find(params[:id])

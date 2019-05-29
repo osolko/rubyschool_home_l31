@@ -65,8 +65,11 @@ function cancel_order()
 {
     window.localStorage.clear();
 
+
     update_orders();
 	update_orders_button();
+
+	$('#cart').text('Cart has been clean')
 
 	return false;
 
